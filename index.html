@@ -5,8 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- jQuery UI cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/eggplant/jquery-ui.min.css" integrity="sha256-fGxAC40oa1naPPwQ5ToWafNA+QtM1IUVuf9++DSeH6w=" crossorigin="anonymous" />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- own stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <title>Location Details</title>
   </head>
@@ -14,31 +19,56 @@
     <h1 class="text-center pt-5">Hello, Summer! </br> Explore Beaches and Bays in New Zealand</h1>
     <div class="container my-5">
 
-    <h4 class="text-success pt-2">Choose Location</h4>
-      <select class="form-control mt-3 w-50" id="place">
-        <option value="Wellington">Wellington</option>
-        <option value="Auckland">Auckland</option>
-      </select>
 
-    <h4 class="text-success pt-2 mt-4">Duration</h4>
-      <select class="form-control mt-3 w-50" id="duration">
-        <option value="10">less than 10 min</option>
-        <option value="20">less than 20 min</option>
-        <option value="50">less than 50 min</option>
-      </select>
+        <label for="startDate" class="h3 mr-2 mb-5">Start Date: </label>
+        <input type="text" id="startDate" class="mr-5">
 
-      <button type="button" class="btn btn-danger mt-5" id="mapBtn">Show Details</button>
+        <label for="endDate" class="h3 mr-2 mb-5">End Date: </label>
+        <input type="text" id="endDate">
+        <input type="button" id="calcDate" class="btn btn-lg btn-danger ml-5" value="Calculate Date">
 
-      <div id="map"></div>
-    </div>
+        <label for="days" class="h3 mr-2"> Number of days chosen </lable>
+        <input type="text" id="days" class="form-control">
+
+      </br>
+        <label for="place" class="text-success pt-2">Choose Location</label>
+          <select class="form-control mt-3 w-50" id="location">
+            <option value="Wellington">Wellington</option>
+            <option value="Auckland">Auckland</option>
+            <option value="Queenstown">Queenstown</option>
+          </select>
+
+        <label for="duration" class="text-success pt-2 mt-4">Duration from local i-site center</label>
+          <select class="form-control mt-3 w-50" id="duration">
+            <option value="10">10 mins</option>
+            <option value="20">20 mins</option>
+            <option value="30">30 mins</option>
+          </select>
+
+          <button id="mapBtn" type="button" class="btn btn-danger mt-5">Show Details</button>
+
+      </div>
+
+      <div class="container">
+          <div id="map"></div>
+      </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+
+    <!-- jquery-UI script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+
+    <!--  apiKey -->
     <script src="js/config.json"></script>
+
+    <!-- own script -->
     <script src="js/script.js"></script>
 
   </body>
